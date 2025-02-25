@@ -1,0 +1,49 @@
+.education-section {
+    background-color: #002A32;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+.school-image {
+    width: 100px;
+    height: 100px;
+    background-size: contain;
+}
+
+.education-section-title {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.education-container {
+    margin: 1rem 0;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.school-container {
+    background-color: #fff;
+    color: #002A32;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.school-container-header {
+    display: flex;
+    gap: 1rem;
+}
+
+.school-title {
+    align-self: center;
+    font-size: 2rem;
+}
+
+.school-description {
+    width: 35ch;
+    margin: 1rem 0;
+}
+
+.school-gpa {
+    font-weight: 600;
+}

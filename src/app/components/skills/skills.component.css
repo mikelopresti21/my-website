@@ -1,0 +1,47 @@
+.skills-section {
+    padding: 1rem 0;
+}
+
+.skills-section-title {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.skills-container {
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.skill {
+    background-color: #002A32;
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s;
+}
+
+.skill:hover {
+    transform: scale(1.1);
+}
+
+.skill-images-container {
+    display: flex;
+    justify-content: center;
+}
+
+.skill-image {
+    width: 50px;
+    height: 50px;
+    background-size: contain;
+}
+
+.skill-title {
+    margin: 1rem 0;
+}
+
+.skill-description {
+    width: 22ch;
+}

@@ -1,0 +1,43 @@
+.footer-section {
+    background-color: #002A32;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+.footer-section a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer-navigation {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.footer-link-container {
+    display: flex;
+    gap: 0.2rem;
+}
+
+.footer-link-icon {
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    align-self: center;
+}
+
+.footer-link-text {
+    align-self: center;
+}
+
+.footer-container-title {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}

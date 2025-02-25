@@ -1,0 +1,45 @@
+.hero-section {
+    padding: 1rem 0;
+}
+
+.hero-name {
+    text-align: center;
+    font-weight: 300;
+    font-size: 1.2rem;
+    color: #444444;
+}
+
+.hero-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.hero-description-2 {
+    text-align: center;
+    font-weight: 300;
+    color: #444444;
+}
+
+.hero-image {
+    width: 150px;
+    height: 150px;
+    border: solid #002A32 5px;
+    border-radius: 100px;
+    margin-inline: auto;
+    animation: float 1s ease 0s infinite alternate none;
+    background-image: url(/images/headshot.jpg);
+    background-size: contain;
+    margin-bottom: 0.5rem;
+}
+
+
+@keyframes float {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-3px);
+    }
+}

@@ -1,0 +1,19 @@
+<section class="footer-section">
+    <div class="footer-navigation">
+        <div class="footer-container">
+            <p class="footer-container-title">Links</p>
+            <div class="footer-link-container" *ngFor="let link of footerLinks">
+                <div class="footer-link-icon" [style.backgroundImage]="'url(' + link.image + ')'"></div>
+                <a class="footer-link-text" target="_blank" href="{{link.link}}">{{link.title}}</a>
+            </div>
+        </div>
+        <div class="footer-container">
+            <p class="footer-container-title">Pages</p>
+            <a *ngFor="let page of footerPages" routerLink="{{page.route}}">{{page.title}}</a>
+        </div>
+        <div class="footer-container">
+            <p class="footer-container-title">Games</p>
+            <a *ngFor="let game of footerGames" target="_blank" href="{{game.link}}">{{game.title}}</a>
+        </div>
+    </div>
+</section>

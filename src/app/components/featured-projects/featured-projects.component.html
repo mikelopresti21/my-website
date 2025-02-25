@@ -1,0 +1,21 @@
+<section class="featured-projects-section">
+    <p class="featured-projects-title">Featured Projects</p>
+    <div class="featured-projects-container">
+        <div class="project-container" *ngFor="let project of projects">
+            <p class="project-title">{{project.title}}</p>
+            <div class="project-image" [style.backgroundImage]="project.image ? 'url(' + project.image + ')' : 'none'"></div>
+            <p class="project-description">{{project.description}}</p>
+            <button class="project-btn">
+                <a *ngIf="project.type === 'internal'; else externalLink" [routerLink]="project.route">
+                    {{ project.btnText }}
+                </a>      
+                <ng-template #externalLink>
+                    <a [href]="project.route" target="_blank">
+                      {{project.btnText}}
+                    </a>
+                </ng-template>      
+            </button>
+        </div>
+    </div>
+    <button class="featured-projects-btn" routerLink="projects">View All Projects</button>
+</section>

@@ -1,0 +1,12 @@
+<section class="skills-section">
+    <p class="skills-section-title">Software Developement Skills</p>
+    <div class="skills-container">
+        <div class="skill" *ngFor="let skill of skills">
+            <div class="skill-images-container">
+                <div class="skill-image" *ngFor="let image of skill.images" [style.backgroundImage]="'url(' + image + ')'"></div>
+            </div>
+            <p class="skill-title">{{skill.title}}</p>
+            <p class="skill-description">{{skill.description}}</p>
+        </div>
+    </div>
+</section>
