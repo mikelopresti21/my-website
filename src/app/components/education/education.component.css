@@ -16,8 +16,10 @@
 }
 
 .education-container {
-    margin: 1rem 0;
+    width: 90%;
+    margin: 1rem auto;
     display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
     justify-content: center;
 }
@@ -46,4 +48,16 @@
 
 .school-gpa {
     font-weight: 600;
+}
+
+@media (max-width: 375px) {
+
+    .school-image {
+        width: 75px;
+        height: 75px;
+    }
+
+    .school-description {
+        width: 30ch;
+    }
 }

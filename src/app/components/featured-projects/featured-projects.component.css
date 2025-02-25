@@ -29,6 +29,7 @@
     width: 75%;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     margin-inline: auto;
     gap: 1.5rem;
 }

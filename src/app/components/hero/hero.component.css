@@ -17,6 +17,7 @@
 
 .hero-description-2 {
     text-align: center;
+    text-wrap: wrap;
     font-weight: 300;
     color: #444444;
 }

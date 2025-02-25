@@ -10,6 +10,8 @@
 }
 
 .footer-navigation {
+    width: 90%;
+    margin-inline: auto;
     display: flex;
     justify-content: center;
     gap: 3rem;
@@ -40,4 +42,11 @@
 .footer-container-title {
     font-size: 1.4rem;
     margin-bottom: 0.5rem;
+}
+
+@media (max-width: 375px) {
+
+    .footer-navigation {
+        gap: 2rem;
+    }
 }
