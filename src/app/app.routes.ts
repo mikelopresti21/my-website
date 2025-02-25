@@ -6,7 +6,7 @@ import { RustAwayComponent } from './pages/rust-away/rust-away.component';
 
 export const routes: Routes = [
     {
-        path: '', 
+        path: '/', 
         component: HomeComponent,
         title: 'Home'
     },
