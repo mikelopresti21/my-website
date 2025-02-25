@@ -40,7 +40,7 @@ export class AllProjectsComponent {
         image: '/images/original-website-cover.jpg',
         description: 'The classic Snake game, build with Html, CSS, and JavaScript.',
         btnText: 'Play Game',
-        route: 'https://mikelopresti21.github.io/snake.html',
+        route: 'public/images/snake-cover.png',
         type: 'external'
       }
   ]
