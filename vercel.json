@@ -3,7 +3,7 @@
       { "src": "server.js", "use": "@vercel/node" },
       { "src": "dist/mikes-website/browser", "use": "@vercel/static" }
     ],
-    "rewrites": [
-      { "source": "/(.*)", "destination": "/index.html" }
+    "routes": [
+      { "src": "/(.*)", "dest": "/server.js" }
     ]
 }
