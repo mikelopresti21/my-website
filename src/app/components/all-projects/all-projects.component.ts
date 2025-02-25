@@ -37,10 +37,10 @@ export class AllProjectsComponent {
       },
       {
         title: 'Snake',
-        image: '/images/original-website-cover.jpg',
+        image: '/images/snake-cover.png',
         description: 'The classic Snake game, build with Html, CSS, and JavaScript.',
         btnText: 'Play Game',
-        route: 'public/images/snake-cover.png',
+        route: 'https://mikelopresti21.github.io/snake.html',
         type: 'external'
       }
   ]
