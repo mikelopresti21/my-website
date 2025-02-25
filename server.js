@@ -16,6 +16,10 @@ app.listen(PORT, () => {
 app.use(express.static(distPath));
 app.use(express.json());
 
+app.get('/*', (req, res) => {
+    res.sendFile(path.join(distPath,"index.html"));
+});
+
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
