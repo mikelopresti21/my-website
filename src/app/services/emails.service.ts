@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class EmailService {
 
-  private apiUrl = 'http://localhost:3000/contact';
+  private apiUrl = 'https://www.mikelopresti.com/contact';
 
   constructor(private http: HttpClient) { }
 
