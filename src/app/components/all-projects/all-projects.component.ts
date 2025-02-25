@@ -22,7 +22,7 @@ export class AllProjectsComponent {
       {
         title: 'Simon',
         image: '/images/simon-cover.png',
-        description: 'The classic Simon memory game, build with Html, CSS, and JavaScript.',
+        description: 'The classic Simon memory game, built with HTML, CSS, and JavaScript.',
         btnText: 'Play Game',
         route: 'https://mikelopresti21.github.io/simon.html',
         type: 'external'
@@ -38,7 +38,7 @@ export class AllProjectsComponent {
       {
         title: 'Snake',
         image: '/images/snake-cover.png',
-        description: 'The classic Snake game, build with Html, CSS, and JavaScript.',
+        description: 'The classic Snake game, built with HTML, CSS, and JavaScript.',
         btnText: 'Play Game',
         route: 'https://mikelopresti21.github.io/snake.html',
         type: 'external'

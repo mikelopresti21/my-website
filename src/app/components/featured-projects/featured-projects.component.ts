@@ -22,7 +22,7 @@ export class FeaturedProjectsComponent {
     {
       title: 'Simon',
       image: '/images/simon-cover.png',
-      description: 'The classic Simon memory game, build with Html, CSS, and JavaScript.',
+      description: 'The classic Simon memory game, built with Html, CSS, and JavaScript.',
       btnText: 'Play Game',
       route: 'https://mikelopresti21.github.io/simon.html',
       type: 'external'
