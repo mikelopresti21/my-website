@@ -42,6 +42,14 @@ export class AllProjectsComponent {
         btnText: 'Play Game',
         route: 'https://mikelopresti21.github.io/snake.html',
         type: 'external'
+      },
+      {
+        title: 'WizOff',
+        image: '/images/WizOff_Cover.jpg',
+        description: 'A local two player video game made in Unity Engine.',
+        btnText: 'Play Game',
+        route: 'https://mikelo21.itch.io/wizoff',
+        type: 'external'
       }
   ]
 }
