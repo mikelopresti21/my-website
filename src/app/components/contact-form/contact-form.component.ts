@@ -13,7 +13,11 @@ import { EmailService } from '../../services/emails.service';
 export class ContactFormComponent implements AfterViewInit{
   
   ngAfterViewInit() {
-    this.renderCaptcha();
+    if ((window as any).grecaptcha) {
+      (window as any).grecaptcha.render('g-recaptcha', {
+        sitekey: '6LcI0eoqAAAAANlML_wvkSM84Z7NcCBlFC2zdfgi'
+      });
+    }
   }
 
   constructor(private emailService: EmailService){}
@@ -34,10 +38,12 @@ export class ContactFormComponent implements AfterViewInit{
       message: contactForm.controls['message'].value,
     }
 
+    recaptchaResponse.reset();
+    contactForm.reset();
+
     this.emailService.sendEmail(formData)
       .subscribe({
         next: response => {
-          contactForm.reset();
           console.log(response);
           window.alert("Email sent successfully! Thank you for reaching out. I will follow up with you as soon as I can.");
         },
@@ -48,11 +54,4 @@ export class ContactFormComponent implements AfterViewInit{
       })
   }
 
-  renderCaptcha(){
-    if ((window as any).grecaptcha) {
-      (window as any).grecaptcha.render('g-recaptcha', {
-        sitekey: '6LcI0eoqAAAAANlML_wvkSM84Z7NcCBlFC2zdfgi'
-      });
-    }
-  }
 }
