@@ -5,6 +5,8 @@ const distPath = path.join(__dirname, "..", "dist", "mikes-website", "browser");
 const nodemailer = require('nodemailer');
 require('dotenv').config();
 
+console.log('GMAIL_USER:', process.env.GMAIL_USER);
+console.log('GMAIL_PASS:', process.env.GMAIL_PASS);
 
 const app = express();
 
@@ -54,8 +56,5 @@ app.post('/contact', async (req, res) => {
     } catch (error) {
         res.status(500).send({ error: `Error sending email: ${error.message}` });
     }
-
-    console.log('GMAIL_USER:', process.env.GMAIL_USER);
-    console.log('GMAIL_PASS:', process.env.GMAIL_PASS);
     
 });
