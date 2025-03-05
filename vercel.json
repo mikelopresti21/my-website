@@ -4,6 +4,6 @@
       { "src": "dist/mikes-website/browser", "use": "@vercel/static" }
     ],
     "routes": [
-      { "src": "/(.*)", "dest": "/server.js" }
+      { "src": "/(.*)", "dest": "/backend/server.js" }
     ]
 }
