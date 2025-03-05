@@ -1,5 +1,5 @@
 <section class="contact-form-section">
-    <form class="contact-form" (ngSubmit)="submit(contactForm)" #contactForm="ngForm">
+    <form class="contact-form" (ngSubmit)="submit(contactForm)" #contactForm="ngForm" action="?" method="POST">
         <p class="contact-form-title">I look forward to hearing from you!</p>
         <div class="contact-form-info-container">
             <input 
@@ -26,7 +26,7 @@
             ngModel
             #message="ngModel"
         ></textarea>
-        <re-captcha siteKey="6LcI0eoqAAAAANlML_wvkSM84Z7NcCBlFC2zdfgi" (resolved)="onCaptchaResolved($event)"></re-captcha>
+        <div id="g-recaptcha" data-sitekey="6LcI0eoqAAAAANlML_wvkSM84Z7NcCBlFC2zdfgi"></div>
         <div>
             <button class="contact-form-button" type="submit" >Send Email</button>
         </div>   

@@ -1,19 +1,23 @@
-import { Component } from '@angular/core';
-import { RecaptchaModule, RecaptchaFormsModule } from 'ng-recaptcha';
+import { AfterViewInit, Component } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { EmailService } from '../../services/emails.service';
 
 
 @Component({
   selector: 'app-contact-form',
-  imports: [FormsModule, RecaptchaModule, RecaptchaFormsModule],
+  imports: [FormsModule],
   templateUrl: './contact-form.component.html',
   styleUrl: './contact-form.component.css'
 })
 
-export class ContactFormComponent {
-  onCaptchaResolved($event: string|null) {
-  throw new Error('Method not implemented.');
+export class ContactFormComponent implements AfterViewInit{
+  
+  ngAfterViewInit() {
+    if ((window as any).grecaptcha) {
+      (window as any).grecaptcha.render('g-recaptcha', {
+        sitekey: '6LcI0eoqAAAAANlML_wvkSM84Z7NcCBlFC2zdfgi'
+      });
+    }
   }
 
   constructor(private emailService: EmailService){}
