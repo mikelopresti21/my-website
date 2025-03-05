@@ -26,8 +26,9 @@
             ngModel
             #message="ngModel"
         ></textarea>
+        <re-captcha siteKey="6LcI0eoqAAAAANlML_wvkSM84Z7NcCBlFC2zdfgi" (resolved)="onCaptchaResolved($event)"></re-captcha>
         <div>
             <button class="contact-form-button" type="submit" >Send Email</button>
-        </div>
+        </div>   
     </form>
 </section>
