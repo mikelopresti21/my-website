@@ -1,8 +1,9 @@
 const { error } = require('console');
 const express = require('express');
 const path = require("path");
-const distPath = path.join(__dirname, "dist", "mikes-website", "browser");
+const distPath = path.join(__dirname, "..", "dist", "mikes-website", "browser");
 const nodemailer = require('nodemailer');
+require('dotenv').config();
 
 
 const app = express();
@@ -23,8 +24,8 @@ app.get('/*', (req, res) => {
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: 'mikelopresti21@gmail.com',
-        pass: 'jlrq upto xuzw ipmp'
+        user: process.env.GMAIL_USER,
+        pass: process.env.GMAIL_PASS
     },
 });
 

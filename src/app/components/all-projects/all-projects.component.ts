@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Project } from '../../project';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { interval } from 'rxjs';
 
 @Component({
   selector: 'app-all-projects',
@@ -50,6 +51,6 @@ export class AllProjectsComponent {
         btnText: 'Play Game',
         route: 'https://mikelo21.itch.io/wizoff',
         type: 'external'
-      }
+      },
   ]
 }

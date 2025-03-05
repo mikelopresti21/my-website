@@ -6,7 +6,7 @@
             <div class="project-image" [style.backgroundImage]="project.image ? 'url(' + project.image + ')' : 'none'"></div>
             <p class="project-description">{{project.description}}</p>
             <button class="project-btn">
-                <a *ngIf="project.type === 'internal'; else externalLink" [routerLink]="project.route">
+                <a *ngIf="project.type === 'internal'; else externalLink" [routerLink]="'/' + project.route">
                     {{ project.btnText }}
                 </a>      
                 <ng-template #externalLink>

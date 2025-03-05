@@ -29,5 +29,5 @@ export const routes: Routes = [
         path: 'wiz-off',
         component: RustAwayComponent,
         title: 'Wiz Off'
-    }
+    },
 ];
