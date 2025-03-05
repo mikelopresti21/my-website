@@ -13,11 +13,7 @@ import { EmailService } from '../../services/emails.service';
 export class ContactFormComponent implements AfterViewInit{
   
   ngAfterViewInit() {
-    if ((window as any).grecaptcha) {
-      (window as any).grecaptcha.render('g-recaptcha', {
-        sitekey: '6LcI0eoqAAAAANlML_wvkSM84Z7NcCBlFC2zdfgi'
-      });
-    }
+    this.renderCaptcha();
   }
 
   constructor(private emailService: EmailService){}
@@ -50,5 +46,13 @@ export class ContactFormComponent implements AfterViewInit{
           window.alert("Failed to send email! Please make sure you are entering a valid email address");
         }
       })
+  }
+
+  renderCaptcha(){
+    if ((window as any).grecaptcha) {
+      (window as any).grecaptcha.render('g-recaptcha', {
+        sitekey: '6LcI0eoqAAAAANlML_wvkSM84Z7NcCBlFC2zdfgi'
+      });
+    }
   }
 }
