@@ -24,6 +24,13 @@ export class ContactFormComponent implements AfterViewInit{
 
   submit(contactForm: any){
 
+    const recaptchaResponse = (window as any).grecaptcha.getResponse();
+
+    if (!recaptchaResponse) {
+      alert('Please complete the reCAPTCHA.');
+      return;
+    }
+    
     const formData = {
       name: contactForm.controls['name'].value,
       email: contactForm.controls['email'].value,
