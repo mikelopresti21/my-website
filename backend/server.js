@@ -2,6 +2,7 @@ const { error } = require('console');
 const express = require('express');
 const path = require("path");
 const distPath = path.join(__dirname, "..", "dist", "mikes-website", "browser");
+const axios = require('axios');
 const nodemailer = require('nodemailer');
 require('dotenv').config();
 
@@ -20,6 +21,8 @@ app.get('/*', (req, res) => {
     res.sendFile(path.join(distPath,"index.html"));
 });
 
+const RECAPTCHA_SECRET_KEY = process.env.RECAPTCHA_SECRET_KEY;
+
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
@@ -33,8 +36,21 @@ const transporter = nodemailer.createTransport({
 
 app.post('/contact', async (req, res) => {
 
-    const {name, email, message} = req.body;
+    const {recaptcha, name, email, message} = req.body;
 
+    try {
+
+    const response = await axios.post('https://www.google.com/recaptcha/api/siteverify', null, {
+        params: {
+            secret: RECAPTCHA_SECRET_KEY,
+            response: recaptcha,
+        }
+    });
+
+    if (!response.data.success) {
+        return res.status(400).json({ error: 'reCAPTCHA verification failed' });
+    }
+    
     const contactEmail = {
         from: email,
         to: 'mikelopresti21@gmail.com',
@@ -55,6 +71,10 @@ app.post('/contact', async (req, res) => {
         res.status(200).send({ message: "Email and auto-reply sent successfully" });
     } catch (error) {
         res.status(500).send({ error: `Error sending email: ${error.message}` });
+    }
+
+    } catch (error) {
+        res.status(500).send({ error: `Internal server error` });
     }
     
 });

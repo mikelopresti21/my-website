@@ -30,8 +30,9 @@ export class ContactFormComponent implements AfterViewInit{
       alert('Please complete the reCAPTCHA.');
       return;
     }
-    
+
     const formData = {
+      recaptcha: recaptchaResponse,
       name: contactForm.controls['name'].value,
       email: contactForm.controls['email'].value,
       message: contactForm.controls['message'].value,
