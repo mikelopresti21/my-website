@@ -17,7 +17,7 @@ app.listen(PORT, () => {
 app.use(express.static(distPath));
 app.use(express.json());
 
-app.get('/*', (req, res) => {
+app.get('*', (req, res) => {
     res.sendFile(path.join(distPath,"index.html"));
 });
 
@@ -50,7 +50,7 @@ app.post('/contact', async (req, res) => {
     if (!response.data.success) {
         return res.status(400).json({ error: 'reCAPTCHA verification failed' });
     }
-    
+
     const contactEmail = {
         from: email,
         to: 'mikelopresti21@gmail.com',
