@@ -38,16 +38,16 @@ export class ContactFormComponent implements AfterViewInit{
       message: contactForm.controls['message'].value,
     }
 
-    recaptchaResponse.reset();
-    contactForm.reset();
-
     this.emailService.sendEmail(formData)
       .subscribe({
         next: response => {
+          recaptchaResponse.reset();
+          contactForm.reset();
           console.log(response);
           window.alert("Email sent successfully! Thank you for reaching out. I will follow up with you as soon as I can.");
         },
         error: error => {
+          recaptchaResponse.reset();
           console.log(error);
           window.alert("Failed to send email! Please make sure you are entering a valid email address");
         }
