@@ -41,13 +41,13 @@ export class ContactFormComponent implements AfterViewInit{
     this.emailService.sendEmail(formData)
       .subscribe({
         next: response => {
-          recaptchaResponse.reset();
+          (window as any).grecaptcha.reset();
           contactForm.reset();
           console.log(response);
           window.alert("Email sent successfully! Thank you for reaching out. I will follow up with you as soon as I can.");
         },
         error: error => {
-          recaptchaResponse.reset();
+          (window as any).grecaptcha.reset();
           console.log(error);
           window.alert("Failed to send email! Please make sure you are entering a valid email address");
         }
