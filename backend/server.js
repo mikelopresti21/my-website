@@ -13,13 +13,7 @@ const Project = require('./models/project');
 
 const app = express();
 
-mongoose.connect(`mongodb+srv://mikelopresti21:${process.env.MONGODB_PASS}@my-website.cl6gi.mongodb.net/website?retryWrites=true&w=majority&appName=my-website`)
-    .then(() => {
-        console.log('connected to mongo')
-    })
-    .catch (() => {
-        console.log('connection to mongo failed')
-    });
+mongoose.connect(`mongodb+srv://mikelopresti21:${process.env.MONGODB_PASS}@my-website.cl6gi.mongodb.net/website?retryWrites=true&w=majority&appName=my-website`);
 
 const PORT = process.env.PORT || 3000;
 
