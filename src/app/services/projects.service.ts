@@ -8,7 +8,7 @@ import { Project } from '../project';
 })
 export class ProjectsService {
 
-  private apiUrl = "http://www.mikelopresti.com/api/projects"
+  private apiUrl = "https://www.mikelopresti.com/api/projects"
 
   constructor(private http: HttpClient) { }
 
