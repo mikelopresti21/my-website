@@ -3,10 +3,23 @@ const express = require('express');
 const path = require("path");
 const distPath = path.join(__dirname, "..", "dist", "mikes-website", "browser");
 const axios = require('axios');
+const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 require('dotenv').config();
 
+const mongoose = require('mongoose');
+
+const Project = require('./models/project');
+
 const app = express();
+
+mongoose.connect(`mongodb+srv://mikelopresti21:${process.env.MONGODB_PASS}@my-website.cl6gi.mongodb.net/website?retryWrites=true&w=majority&appName=my-website`)
+    .then(() => {
+        console.log('connected to mongo')
+    })
+    .catch (() => {
+        console.log('connection to mongo failed')
+    });
 
 const PORT = process.env.PORT || 3000;
 
@@ -16,6 +29,16 @@ app.listen(PORT, () => {
 
 app.use(express.static(distPath));
 app.use(express.json());
+
+app.get('/api/projects', async (req, res) => {
+    try {
+        const projects = await Project.find();
+        res.status(200).json(projects);
+    } catch (error) {
+        res.status(500).json({ message: 'error fetching projects'});
+    }
+});
+
 
 app.get('/*', (req, res) => {
     res.sendFile(path.join(distPath,"index.html"));

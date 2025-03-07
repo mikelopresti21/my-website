@@ -38,12 +38,7 @@
     background-color: white;
     color: #002A32;
     border-radius: 100px;
-    border-style: none;
     padding: 0.5rem;
-}
-
-.contact-form-button:hover {
-    cursor: pointer;
 }
 
 @media (max-width: 768px){

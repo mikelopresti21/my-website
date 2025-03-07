@@ -4,5 +4,5 @@ export interface Project{
     description: string,
     btnText: string,
     route: string,
-    type: string
+    internal: boolean
 }

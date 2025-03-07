@@ -4,11 +4,6 @@
     padding: 1rem 0;
 }
 
-.footer-section a {
-    text-decoration: none;
-    color: inherit;
-}
-
 .footer-navigation {
     width: 90%;
     margin-inline: auto;

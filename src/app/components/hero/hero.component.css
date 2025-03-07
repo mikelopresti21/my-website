@@ -33,14 +33,3 @@
     background-size: contain;
     margin-bottom: 0.5rem;
 }
-
-
-@keyframes float {
-    from {
-        transform: translateY(0);
-    }
-
-    to {
-        transform: translateY(-3px);
-    }
-}

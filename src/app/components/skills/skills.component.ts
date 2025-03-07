@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 import { Skill } from '../../skill';
 
 @Component({
   selector: 'app-skills',
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.css'
 })

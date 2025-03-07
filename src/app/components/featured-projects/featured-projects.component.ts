@@ -17,7 +17,7 @@ export class FeaturedProjectsComponent {
       description: 'A 2D platformer game created in UnityEngine.',
       btnText: 'Play Game',
       route: 'https://mikelo21.itch.io/rust-away',
-      type: 'external'
+      internal: false
     },
     {
       title: 'Simon',
@@ -25,7 +25,7 @@ export class FeaturedProjectsComponent {
       description: 'The classic Simon memory game, built with Html, CSS, and JavaScript.',
       btnText: 'Play Game',
       route: 'https://mikelopresti21.github.io/simon.html',
-      type: 'external'
+      internal: false
     },
     {
       title: 'Original Portfolio Website',
@@ -33,7 +33,7 @@ export class FeaturedProjectsComponent {
       description: 'This website is a refactored version of my original portfolio site.',
       btnText: 'Visit Website',
       route: 'https://mikelopresti21.github.io/',
-      type: 'external'
+      internal: false
     }
 
 

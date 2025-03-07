@@ -3,6 +3,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { RustAwayComponent } from './pages/rust-away/rust-away.component';
+import { ResumeComponent } from './pages/resume/resume.component';
 
 export const routes: Routes = [
     {
@@ -30,4 +31,9 @@ export const routes: Routes = [
         component: RustAwayComponent,
         title: 'Wiz Off'
     },
+    {
+        path: 'resume',
+        component: ResumeComponent,
+        title: 'Resume'
+    }
 ];
