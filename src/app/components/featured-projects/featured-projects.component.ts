@@ -12,6 +12,14 @@ import { RouterModule } from '@angular/router';
 export class FeaturedProjectsComponent {
   projects: Project[] = [
     {
+      title: 'UASTest.com',
+      image: '/images/bos.jpg',
+      description: 'A practice test application for the FAA\'s unammend aircraft certification test',
+      btnText: 'Visit Website',
+      route: 'https://uastest.com/',
+      internal: false
+    },
+    {
       title: 'Rust Away',
       image: '/images/Rust_Away_Cover.jpg',
       description: 'A 2D platformer game created in UnityEngine.',
@@ -25,14 +33,6 @@ export class FeaturedProjectsComponent {
       description: 'The classic Simon memory game, built with Html, CSS, and JavaScript.',
       btnText: 'Play Game',
       route: 'https://mikelopresti21.github.io/simon.html',
-      internal: false
-    },
-    {
-      title: 'Original Portfolio Website',
-      image: '/images/original-website-cover.jpg',
-      description: 'This website is a refactored version of my original portfolio site.',
-      btnText: 'Visit Website',
-      route: 'https://mikelopresti21.github.io/',
       internal: false
     }
 

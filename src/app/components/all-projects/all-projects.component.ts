@@ -14,6 +14,14 @@ export class AllProjectsComponent {
   
   projects: Project[] = [
     {
+      title: 'UASTest.com',
+      image: '/images/bos.jpg',
+      description: 'A practice test application for the FAA\'s unammend aircraft certification test',
+      btnText: 'Visit Website',
+      route: 'https://uastest.com/',
+      internal: false
+    },
+    {
       title: "Rust Away",
       image: "/images/Rust_Away_Cover.jpg",
       description: "A 2D platformer game created in UnityEngine.",
