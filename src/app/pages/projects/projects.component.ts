@@ -7,6 +7,6 @@ import { AllProjectsComponent } from '../../components/all-projects/all-projects
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.css'
 })
-export class ProjectsComponent {
+export class ProjectsComponent{
 
 }

@@ -29,7 +29,7 @@
     border-radius: 100px;
     margin-inline: auto;
     animation: float 1s ease 0s infinite alternate none;
-    background-image: url(/images/headshot.jpg);
+    background-image: url(../../../assets/headshot.jpg);
     background-size: contain;
     margin-bottom: 0.5rem;
 }

@@ -48,12 +48,12 @@ export class FooterComponent {
 
   footerLinks: FooterLinks[] = [
     {
-      image: '/images/github-icon.png',
+      image: 'github-icon.png',
       title: 'GitHub',
       link: 'https://github.com/mikelopresti21'
     },
     {
-      image: '/images/linkedin-icon.png',
+      image: 'linkedin-icon.png',
       title: 'LinkedIn',
       link: 'https://www.linkedin.com/in/michaelvlopresti'
     }
