@@ -1,12 +1,29 @@
 <section class="skills-section">
-    <p class="skills-section-title">Software Developement Skills</p>
+    <h2 class="skills-section-title">Skills</h2>
     <div class="skills-container">
-        <div class="skill" *ngFor="let skill of skills">
-            <div class="skill-images-container">
-                <div class="skill-image" *ngFor="let image of skill.images" [style.backgroundImage]="'url(' + image + ')'"></div>
-            </div>
-            <p class="skill-title">{{skill.title}}</p>
-            <p class="skill-description">{{skill.description}}</p>
+        <div class="skill blue">
+            <h3 class="skill-title">Frontend Development</h3>
+            <ul>
+                <li>Component-based architecture with services, application state management, and observables.</li>
+                <li>Responsive design with a desktop-first approach, adapting layouts for tablets and mobile devices.</li>
+                <li>Strong foundation in HTML, CSS, and JavaScript</li>
+            </ul>
+        </div>
+        <div class="skill purple">
+            <h3 class="skill-title">Backend Development</h3>
+            <ul>
+                <li>Building scalable APIs with structured routes, controllers, and middleware for security and performance</li>
+                <li>Designing normalized relational schemas with SQL, using polymorphic associations to reduce redundancy</li>
+                <li>Implementing Data Transfer Objects (DTOs) for clean, consistent frontend to backend communication</li>
+            </ul>
+        </div>
+        <div class="skill teal">
+            <h3 class="skill-title">DevOps & Cloud</h3>
+            <ul>
+                <li>Experience with CI/CD pipelines (GitHub Actions for Angular/.NET/Azure applications)</li>
+                <li>Azure deployment and configuration</li>
+                <li>Vercel deployment and configuration</li>
+            </ul>
         </div>
     </div>
 </section>

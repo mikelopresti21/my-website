@@ -1,20 +1,28 @@
 <section class="all-projects-section">
     <p class="all-projects-title">All Projects</p>
     <div class="all-projects-container">
-        <div class="project-container" *ngFor="let project of projects">
-            <p class="project-title">{{project.title}}</p>
-            <div class="project-image" [style.backgroundImage]="project.image ? 'url(' + project.image + ')' : 'none'"></div>
-            <p class="project-description">{{project.description}}</p>
-            <button class="project-btn">
-                <a *ngIf="project.internal === true; else externalLink" [routerLink]="'/' + project.route">
-                    {{ project.btnText }}
-                </a>      
-                <ng-template #externalLink>
-                    <a [href]="project.route" target="_blank">
-                      {{project.btnText}}
-                    </a>
-                </ng-template>      
-            </button>
+        <div *ngFor="let project of projects; let i = index" 
+            class="project-container"
+            [ngClass]="i % 3 === 0 ? 'teal' : (i % 2 === 0 ? 'purple' : 'blue')">
+            <ng-container *ngIf="project.internal === true; else externalLink">
+                <a [routerLink]="'/' + project.route">
+                    <div>
+                        <p class="project-title">{{project.title}}</p>
+                        <div class="project-image" [style.backgroundImage]="project.image ? 'url(' + project.image + ')' : 'none'"></div>
+                        <p class="project-description">{{project.description}}</p>
+                    </div>
+                </a>
+            </ng-container>
+
+            <ng-template #externalLink>
+                <a [href]="project.route" target="_blank">
+                    <div>
+                        <p class="project-title">{{project.title}}</p>
+                        <div class="project-image" [style.backgroundImage]="project.image ? 'url(' + project.image + ')' : 'none'"></div>
+                        <p class="project-description">{{project.description}}</p>
+                    </div>
+                </a>
+            </ng-template>
         </div>
     </div>
 </section>

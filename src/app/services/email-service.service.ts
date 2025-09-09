@@ -13,6 +13,7 @@ export class EmailServiceService {
   constructor(private http: HttpClient) { }
 
   sendEmail(formData: any): Observable<any> {
+    console.log(this.apiUrl);
     return this.http.post(`${this.apiUrl}/contact`, formData);
   }
 }

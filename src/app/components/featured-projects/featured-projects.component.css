@@ -1,12 +1,5 @@
 .featured-projects-section {
-    background-color: #002A32;
-    color: #002A32;
-    padding: 1rem 0;
-}
-
-.featured-projects-section a {
-    text-decoration: none;
-    color: inherit;
+    padding: 2rem 0;
 }
 
 .featured-projects-section button {
@@ -23,33 +16,60 @@
     text-align: center;
     font-size: 2rem;
     color: #fff;
+    margin-bottom: 1rem;
+}
+
+.featured-projects-wrapper {
+    position: relative;
+    padding: 2rem;
+    width: fit-content;
+    margin-inline: auto;
+    border-radius: 0.5rem;
+    border: 1px solid rgb(31 41 55);
+    background-color: rgba(17, 24, 39, .5);
 }
 
 .featured-projects-container {
-    width: 75%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-inline: auto;
     gap: 1.5rem;
 }
 
 .project-container {
+    padding: 2rem;
+    color: rgb(156 163 175);
     display: flex;
     flex-direction: column;
-    border: solid #fff 2px;
     border-radius: 10px;
     width: 300px;
     text-align: center;
     margin: 1rem 0;
-    background-color: #fff;
     position: relative;
+    border-radius: 0.5rem;
+    border: 1px solid transparent;
+    background-color: rgba(31, 41, 55, .5);
+}
+
+.project-container.blue:hover {
+    border: 1px solid var(--blue);
+    background-color: var(--blue-bg);
+}
+
+.project-container.purple:hover {
+    border: 1px solid var(--purp);
+    background-color: var(--purp-bg);
+}
+
+.project-container.teal:hover {
+    border: 1px solid var(--teal);
+    background-color: var(--teal-bg);
 }
 
 .project-title {
     font-size: 1.2rem;
     padding: 0.2rem;
-    font-weight: 500;
+    margin-bottom: 1rem;
 }
 
 .project-description {
@@ -65,31 +85,37 @@
     background-repeat: no-repeat;
 }
 
-.project-btn {
-    margin-top: auto;
-    width: 50%;
-    align-self: center;
-    margin-bottom: 0.5rem;
-    background-color: #002A32;
-    color: #fff;
-    padding: .5rem;
-}
-
-.featured-projects-btn {
-    margin: 1rem;
+.all-projects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
     margin-inline: auto;
-    font-size: 1.2rem;
-    background-color: #fff;
-    color: #002A32;
+    font-size: 1rem;
+    text-align: center;
     padding: 0.5rem 1rem;
+    color: rgb(156 163 175);
+    text-decoration: underline;
 }
 
 .star-icon {
-    height: 20px;
-    width: 20px;
-    top: 3px;
-    right: 5px;
+    height: 1.75rem;
+    width: 1.75rem;
     position: absolute;
-    color: black;
-    fill: yellow;
+    top: 1rem;
+    right: 1rem;
+}
+
+.all-projects-icon {
+    fill: rgb(156 163 175);
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.spinner-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
 }
