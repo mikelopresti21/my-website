@@ -1,37 +1,39 @@
 .skills-section {
-    padding: 2rem 0;
+  padding: 2rem 0;
+  width: 100%;
+  max-width: 1536px;
+  margin-inline: auto;
 }
 
 .skills-section-title {
-    text-align: center;
-    font-size: 2rem;
-    color: #fff;
-    margin-bottom: 1rem;
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 1rem;
 }
 
 .skills-container {
-    margin-inline: auto;
-    padding: 2rem;
-    width: fit-content;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    border-radius: var(--container-radius);
-    border: 1px solid rgb(31 41 55);
-    background-color: rgba(17, 24, 39, .5);
+  margin-inline: auto;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  border-radius: var(--container-radius);
+  border: 1px solid rgb(31 41 55);
+  background-color: rgba(17, 24, 39, .5);
 }
 
 .skill {
-    padding: 2rem;
-    color: rgb(156 163 175);
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-    position: relative;
-    border-radius: 0.5rem;
-    border: 1px solid transparent;
-    background-color: rgba(31, 41, 55, .5);
+  flex: 1;
+  padding: 2rem;
+  color: rgb(156 163 175);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-radius: 0.5rem;
+  border: 1px solid transparent;
+  background-color: rgba(31, 41, 55, .5);
 }
 
 .skill.blue .skill-title {
@@ -97,4 +99,35 @@
 
 .skill-description {
     width: 22ch;
+}
+
+@media (max-width: 1280px) {
+  .skills-section {
+    max-width: 1024px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .skills-container {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 1024px) {
+  .skills-section {
+    max-width: 768px;
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-section {
+    max-width: 640px;
+  }
+}
+
+@media (max-width: 425px) {
+  .skills-container,
+  .skill {
+    padding: 1rem;
+  }
 }

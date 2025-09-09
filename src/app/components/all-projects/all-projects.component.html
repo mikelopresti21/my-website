@@ -1,9 +1,13 @@
 <section class="all-projects-section">
-    <p class="all-projects-title">All Projects</p>
+    <h1 class="all-projects-title">All Projects</h1>
+    <div *ngIf="isLoading" class="spinner-wrapper">
+        <p>Loading Projects...</p>
+        <app-spinner></app-spinner>
+    </div>
     <div class="all-projects-container">
         <div *ngFor="let project of projects; let i = index" 
             class="project-container"
-            [ngClass]="i % 3 === 0 ? 'teal' : (i % 2 === 0 ? 'purple' : 'blue')">
+            [ngClass]="['blue', 'purple', 'teal'][i % 3]">
             <ng-container *ngIf="project.internal === true; else externalLink">
                 <a [routerLink]="'/' + project.route">
                     <div>

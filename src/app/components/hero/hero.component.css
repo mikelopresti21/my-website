@@ -83,6 +83,7 @@
 .core-tech-container {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 1rem;
 }
 
@@ -105,3 +106,20 @@
     color: var(--teal);
     background-color: var(--teal-bg);
 }
+
+@media (max-width: 768px) {
+  .hero-name {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .hero-name {
+    font-size: 2.75rem;
+  }
+
+  .hero-title {
+    font-size: 1.75rem;
+  }
+}
+

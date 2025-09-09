@@ -1,15 +1,8 @@
 .featured-projects-section {
+    width: 100%;
+    max-width: 1536px;
+    margin-inline: auto;
     padding: 2rem 0;
-}
-
-.featured-projects-section button {
-    display: block;
-    border-radius: 100px;
-    border: none;
-}
-
-.featured-projects-section button:hover {
-    cursor: pointer;
 }
 
 .featured-projects-title {
@@ -22,9 +15,8 @@
 .featured-projects-wrapper {
     position: relative;
     padding: 2rem;
-    width: fit-content;
     margin-inline: auto;
-    border-radius: 0.5rem;
+    border-radius: var(--container-radius);
     border: 1px solid rgb(31 41 55);
     background-color: rgba(17, 24, 39, .5);
 }
@@ -32,19 +24,18 @@
 .featured-projects-container {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 1.5rem;
+    align-items: stretch;
+    gap: 2rem;
 }
 
 .project-container {
+    flex: 1;
     padding: 2rem;
     color: rgb(156 163 175);
     display: flex;
     flex-direction: column;
     border-radius: 10px;
-    width: 300px;
     text-align: center;
-    margin: 1rem 0;
     position: relative;
     border-radius: 0.5rem;
     border: 1px solid transparent;
@@ -86,6 +77,7 @@
 }
 
 .all-projects {
+    margin-top: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -113,9 +105,46 @@
 }
 
 .spinner-wrapper {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 10;
+    color: rgb(156 163 175);
+    margin: 2rem 0;
+    padding: 2rem;
+    display: flex;
+    width: fit-content;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-inline: auto;
+    border-radius: var(--container-radius);
+    border: 1px solid rgb(31 41 55);
+    background-color: rgba(31, 41, 55, .5);
+}
+
+@media (max-width: 1280px) {
+  .featured-projects-section {
+    max-width: 1024px;
+  }
+}
+
+@media (max-width: 1024px) {
+    .featured-projects-section {
+        max-width: 768px;
+    }
+
+    .featured-projects-container {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+  .featured-projects-section {
+    max-width: 640px;
+  }
+}
+
+@media (max-width: 425px) {
+    .featured-projects-wrapper,
+    .project-container {
+        padding: 1rem;
+    }
 }
