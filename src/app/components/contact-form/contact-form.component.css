@@ -8,6 +8,7 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    width: 100%;
     max-width: 550px;
     border-radius: 0.5rem;
     border: 1px solid rgb(31 41 55);
@@ -16,7 +17,7 @@
 
 .contact-form-title {
     text-align: center;
-    margin: 1rem 0;
+    margin: 2rem 0;
     color: white;
     text-wrap: wrap;
 }
@@ -49,7 +50,19 @@
     caret-color: rgb(156 163 175);
 }
 
+.message-wrapper {
+    width: 100%;
+    color: rgb(156 163 175);
+}
+
+.message-wrapper label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
 .contact-form-message {
+    width: 100%;
     color: rgb(156 163 175);
     height: 100px;
     padding: 0.5rem 1rem;
@@ -69,12 +82,13 @@
     padding: 0.5rem 1rem;
 }
 
-@media (max-width: 768px){
-    .contact-form {
-        width: 80%;
-    }
+.recaptcha-wrapper {
+    display: flex;
+    justify-content: center;
+}
 
-    .contact-form-input-field {
-        width: 100%;
+@media (max-width: 425px) {
+    .contact-form {
+        padding: 1rem;
     }
 }

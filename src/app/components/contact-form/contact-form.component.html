@@ -7,7 +7,6 @@
                 <input class="contact-form-input-field"
                     type="text" 
                     name="name" 
-                    placeholder="Enter your name"
                     ngModel
                     #name="ngModel"/>
             </label>
@@ -16,19 +15,23 @@
                 <input class="contact-form-input-field" 
                     type="text" 
                     name="email" 
-                    placeholder="Enter your email"
                     ngModel
                     #email="ngModel"/>
             </label>
         </div>
-        <textarea 
-            class="contact-form-message" 
-            name="message" 
-            placeholder="Your message" 
-            ngModel
-            #message="ngModel"
-        ></textarea>
-        <div id="g-recaptcha" data-sitekey="6LcI0eoqAAAAANlML_wvkSM84Z7NcCBlFC2zdfgi"></div>
+        <div class="message-wrapper">
+            <label for="">
+                <p>Message:</p>
+                <textarea class="contact-form-message" 
+                    name="message" 
+                    ngModel
+                    #message="ngModel">
+                </textarea>
+            </label>
+        </div>
+        <div class="recaptcha-wrapper">
+            <div id="g-recaptcha" data-sitekey="6LcI0eoqAAAAANlML_wvkSM84Z7NcCBlFC2zdfgi"></div>
+        </div>
         <div>
             <button class="contact-form-button" type="submit" >Send Email</button>
         </div>   

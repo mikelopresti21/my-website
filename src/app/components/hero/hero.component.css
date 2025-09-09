@@ -1,3 +1,7 @@
+.hero-section {
+  margin-top: 4rem;
+}
+
 .hero-name {
   text-align: center;
   font-weight: 700;
@@ -56,22 +60,25 @@
 }
 
 .hero-title {
-    color: white;
-    text-align: center;
-    font-size: 2.25rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
+  color: white;
+  text-align: center;
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
 }
 
-.hero-description-2 {
-    text-align: center;
-    text-wrap: wrap;
-    font-size: 1.25rem;
-    color: rgb(156 163 175);
+.hero-description {
+  max-width: 60ch;
+  margin-inline: auto;
+  text-align: center;
+  text-wrap: wrap;
+  font-size: 1.25rem;
+  color: rgb(156 163 175);
 }
 
 .core-tech-section {
-    padding: 3rem 0;
+  padding: 3rem 0;
+  margin: 1rem 0;
 }
 
 .core-tech-title {
