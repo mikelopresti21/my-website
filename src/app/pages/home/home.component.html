@@ -102,4 +102,50 @@
             </div>
         </div>
     </section>
+    <!-- Education -->
+     <section class="education-section">
+        <h2 class="education-section-title">Education</h2>
+        <div class="education-container">
+            <!-- Rutgers -->
+            <div class="school-container">
+                <div class="school-info-wrapper">
+                    <div class="school-img-wrapper">
+                        <div class="school-image" [style.backgroundImage]="'url(rutgers-icon.png)'"></div>
+                    </div>
+                    <div class="school-info">
+                        <h3 class="school-title">Rutgers</h3>
+                        <p class="school-description">B.A. Computer Science</p>
+                        <p>2024 - 2025</p>
+                        <p class="school-gpa">GPA: 3.76</p>
+                    </div>
+                </div>
+                <div class="school-description">
+                    <app-truncate-text 
+                        [text]="'I enrolled at Rutgers University, New Brunswick in Spring 2024 at the age of 25, driven by a deep curiosity to understand the technology I had worked with for years at Terrestrial Imaging.\<br>\<br> There, I complemented my prior business experience and entrepreneurial spirit with a strong foundation in computer science, discovering a genuine passion for software development.'"
+                        [maxChars]="150">
+                    </app-truncate-text>
+                </div>
+            </div>
+            <!-- Brookdale -->
+            <div class="school-container">
+                <div class="school-info-wrapper">
+                    <div class="school-img-wrapper">
+                        <div class="school-image" [style.backgroundImage]="'url(brookdale-icon.png)'"></div>
+                    </div>
+                    <div class="school-info">
+                        <h3 class="school-title">Brookdale</h3>
+                        <p>A.S Business Admin.</p>
+                        <p>2017 - 2019</p>
+                        <p>GPA: 3.72</p>
+                    </div>
+                </div>
+                <div class="school-description">
+                    <app-truncate-text 
+                        [text]="'I attended Brookdale Community College while launching Terrestrial Imaging. Fresh out of high school, I wanted to continue my education while building my business.\<br>\<br> Focusing on business administration, I was able to directly apply what I learned in the classroom to my day-to-day work as an entrepreneur.'"
+                        [maxChars]="150">
+                    </app-truncate-text>
+                </div>
+            </div>
+        </div>
+    </section>
 </div>

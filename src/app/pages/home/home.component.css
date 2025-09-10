@@ -365,28 +365,90 @@
     width: 22ch;
 }
 
+/* Education */
+.education-section {
+  padding: 2rem 0;
+  width: 100%;
+  max-width: 1536px;
+  margin-inline: auto;
+}
+
+.education-section-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.education-container {
+    color: rgb(156 163 175);
+    display: flex;
+    gap: 2rem;
+    justify-content: space-around;
+    padding: 2rem;
+    border-radius: var(--container-radius);
+    border: 1px solid rgb(31 41 55);
+    background-color: rgba(17, 24, 39, .5);
+}
+
+.school-container {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 1rem;
+}
+
+.school-info-wrapper {
+  flex: 1;
+  display: flex;
+  gap: 1rem;
+}
+
+.school-info {
+  text-wrap: nowrap;
+}
+
+.school-description {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.school-image {
+    width: 100px;
+    height: 100px;
+    background-size: contain;
+    border-radius: 0.375rem;
+    background-color: rgba(17, 24, 39, .5);
+    border: 1px solid rgb(31 41 55);
+}
+
+.school-title {
+  margin-bottom: 0.5rem;
+}
+
 @media (max-width: 1280px) {
-    .featured-projects-section {
+    .featured-projects-section,
+    .skills-section,
+    .education-section {
         max-width: 1024px;
     }
 
-  .skills-section {
-    max-width: 1024px;
-  }
+    .education-container {
+      flex-direction: column;
+    }
 }
 
 @media (max-width: 1024px) {
-    .featured-projects-section {
+    .featured-projects-section,
+    .skills-section,
+    .education-section {
         max-width: 768px;
     }
 
     .featured-projects-container {
         flex-direction: column;
     }
-
-  .skills-section {
-    max-width: 768px;
-  }
 
   .skills-container {
     flex-direction: column;
@@ -398,13 +460,40 @@
         font-size: 3.5rem;
     }
 
-    .featured-projects-section {
+    .featured-projects-section,
+    .skills-section,
+    .education-section {
         max-width: 640px;
     }
 
-    .skills-section {
-        max-width: 640px;
+    .school-image {
+        width: 75px;
+        height: 75px;
     }
+
+    .school-container {
+      display: flex;
+    }
+
+    .school-info-wrapper,
+    .school-description {
+      flex: 1;
+    }
+
+    .school-title {
+      font-size: 1rem;
+    }
+
+    .school-info p,
+    .school-description {
+      font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 600px) {
+  .school-container {
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 425px) {
@@ -417,12 +506,10 @@
     }
 
     .featured-projects-wrapper,
-    .project-container {
-        padding: 1rem;
-    }
-
+    .project-container,
     .skills-container,
-    .skill {
+    .skill,
+    .education-container  {
         padding: 1rem;
     }
 }

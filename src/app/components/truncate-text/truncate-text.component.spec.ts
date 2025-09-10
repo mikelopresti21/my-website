@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EducationComponent } from './education.component';
+import { TruncateTextComponent } from './truncate-text.component';
 
-describe('EducationComponent', () => {
-  let component: EducationComponent;
-  let fixture: ComponentFixture<EducationComponent>;
+describe('TruncateTextComponent', () => {
+  let component: TruncateTextComponent;
+  let fixture: ComponentFixture<TruncateTextComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [EducationComponent]
+      imports: [TruncateTextComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(EducationComponent);
+    fixture = TestBed.createComponent(TruncateTextComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

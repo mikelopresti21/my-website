@@ -1,0 +1,5 @@
+<p [innerHTML]="expanded ? text : truncatedText">
+</p>
+<span *ngIf="isTruncated" class="toggle" (click)="toggle()">
+  {{ expanded ? ' Show less' : '... Read more' }}
+</span>
