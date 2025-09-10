@@ -383,7 +383,7 @@
 .education-container {
     color: rgb(156 163 175);
     display: flex;
-    gap: 2rem;
+    gap: 4rem;
     justify-content: space-around;
     padding: 2rem;
     border-radius: var(--container-radius);
