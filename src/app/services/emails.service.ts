@@ -8,7 +8,7 @@ import { environment } from '../../environments/environment';
 })
 export class EmailService {
 
-  private apiUrl = environment.apiUrl + 'contact';
+  private apiUrl = environment.apiUrl + 'emails/contact';
 
   constructor(private http: HttpClient) { }
 
