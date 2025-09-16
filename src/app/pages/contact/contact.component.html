@@ -35,6 +35,9 @@
             </div>
             <div>
                 <button class="contact-form-button" type="submit" >Send Email</button>
+            </div>
+            <div *ngIf="isLoading" class="loading-spinner-container">
+                <app-spinner></app-spinner>
             </div>   
         </form>
     </section>

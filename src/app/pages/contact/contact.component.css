@@ -3,6 +3,7 @@
 }
 
 .contact-form {
+    position: relative;
     padding: 2rem;
     margin-inline: auto;
     display: flex;
@@ -85,6 +86,19 @@
 .recaptcha-wrapper {
     display: flex;
     justify-content: center;
+}
+
+.loading-spinner-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    background-color: rgba(17, 24, 39, .5);
 }
 
 @media (max-width: 425px) {
