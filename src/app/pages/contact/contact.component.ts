@@ -45,7 +45,7 @@ export class ContactComponent {
       message: contactForm.controls['message'].value,
     }
 
-    this.isLoading
+    this.isLoading = true;
     this.emailService.sendEmail(formData)
       .subscribe({
         next: response => {
